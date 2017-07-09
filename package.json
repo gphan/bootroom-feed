@@ -1,0 +1,24 @@
+{
+  "name": "bootroom-feed",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "express": "^4.15.3",
+    "http-proxy-middleware": "^0.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10",
+    "react-slick": "^0.14.11",
+    "slick-carousel": "^1.6.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server": "node src/proxy.js",
+    "client": "react-scripts start"
+  },
+  "proxy": "http://localhost:3001"
+}
