@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "watch": "react-scripts start",
+    "dev": "concurrently \"PORT=3001 npm start\" \"react-scripts start\"",
     "heroku-postbuild": "npm run build"
   },
   "proxy": "http://localhost:3001"
