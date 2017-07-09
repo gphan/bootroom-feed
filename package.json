@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "watch": "react-scripts start"
+    "watch": "react-scripts start",
+    "heroku-postinstall": "npm build"
   },
   "proxy": "http://localhost:3001"
 }
