@@ -13,12 +13,11 @@
     "slick-carousel": "^1.6.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "node src/proxy.js",
-    "client": "react-scripts start"
+    "watch": "react-scripts start"
   },
   "proxy": "http://localhost:3001"
 }

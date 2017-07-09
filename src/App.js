@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import './App.css';
 
 function getContentPromise() {
-  return axios.get('/content/collection_groups/v1/06cec393-5bd2-4835-bbd5-89c8dbcae1ff/content');
+  return axios.get('/api/content/collection_groups/v1/06cec393-5bd2-4835-bbd5-89c8dbcae1ff/content');
 }
 
 function Thread(props) {
