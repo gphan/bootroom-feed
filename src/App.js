@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import './App.css';
 
 function getContentPromise() {
-  return axios.get('/api/content/collection_groups/v1/06cec393-5bd2-4835-bbd5-89c8dbcae1ff/content');
+  return axios.get('/api/content/collection_groups/v1/06cec393-5bd2-4835-bbd5-89c8dbcae1ff/content?count=100');
 }
 
 function Thread(props) {
@@ -21,6 +21,11 @@ function Thread(props) {
         {coverCard.properties.title}
         <span>{coverCard.properties.subtitle}</span>
       </div>
+      {coverCard.properties.altText.length > 0 &&
+        <div className="description">
+          {coverCard.properties.altText}
+        </div>
+      }
     </div>
   );
 }
@@ -67,7 +72,7 @@ class App extends Component {
     const that = this;
     getContentPromise().then(function(response) {
         that.setState({
-          threads: response.data.objects
+          threads: response.data.objects.reverse()
         })
     });
   }
